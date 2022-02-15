@@ -14,8 +14,12 @@ import lombok.NoArgsConstructor;
 public class SuccessResponse extends DefaultResponse {
 
     private int code = HttpStatus.OK.value();
+    private String message;
     private List<ECAEntries> entries;
 
+    public SuccessResponse(String message) {
+        this.message = message;
+    }
 
     public SuccessResponse(List<ECAEntries> entries) {
         this.entries = entries;

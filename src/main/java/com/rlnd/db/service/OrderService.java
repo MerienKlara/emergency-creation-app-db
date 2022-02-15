@@ -6,6 +6,7 @@ import com.rlnd.db.model.request.RequestModel;
 public interface OrderService {
 
     DefaultResponse save(RequestModel requestModel);
+    DefaultResponse delete(String id);
     DefaultResponse get();
     
 }

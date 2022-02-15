@@ -90,8 +90,8 @@ public class ECAEntries {
         this.longitude = longitude;
     }
 
-    public Date getCreatedDate() {
-        return this.createdDate;
+    public Long getCreatedDate() {
+        return this.createdDate.getTime();
     }
 
     public void setCreatedDate(Date createdDate) {

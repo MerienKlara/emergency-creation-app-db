@@ -33,5 +33,11 @@ public class OrderServiceImpl implements OrderService {
     public DefaultResponse get() {
         return new SuccessResponse(repository.findAll());
     }
+
+    @Override
+    public DefaultResponse delete(String id) {
+        repository.deleteById(Long.parseLong(id));
+        return new SuccessResponse("Entry Successfully Deleted");
+    }
     
 }
